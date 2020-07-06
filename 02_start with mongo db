@@ -1,0 +1,33 @@
+A document is the basic unit of data for MongoDB and is roughly equivalent to a
+row in a relational database management system
+
+a collection can be thought of as a table with a dynamic schema.
+
+A single instance of MongoDB can host multiple independent databases, each of
+which can have its own collections.
+
+
+documents an ordered set of keys with associated values
+
+{"red":"hello ,Shubham"}
+{"blue":"good morning ","pink"=3}
+ 
+in document Keys are strings that can have any utf charecter with some exceptions
+
+  • Keys must not contain the character \0 (the null character). This character is used
+      to signify the end of a key.
+   • The . and $ characters have some special properties and should be used only in
+  certain circumstances, as described in later chapters. In general, they should be
+  considered reserved, and drivers will complain if they are used inappropriately.
+  
+   MongoDB is type-sensitive and case-sensitive. For example, these documents are
+distinct:
+
+
+it cannot have duplicate keys 
+
+
+collection -- it is a group of  documents
+
+
+dynamic schemas 
