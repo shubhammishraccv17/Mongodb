@@ -1,0 +1,69 @@
+MongoDB is a powerful, flexible, and scalable general-purpose database. It combines
+the ability to scale out with features such as secondary indexes, range queries, sorting,
+aggregations, and geospatial indexes.
+
+Features of Mongo db .
+Ease of use -MongoDB is a document-oriented database, not a relational one. The primary reason
+for moving away from the relational model is to make scaling out easier, but there are
+some other advantages as well.
+A document-oriented database replaces the concept of a “row” with a more flexible
+model, the “document.” By allowing embedded documents and arrays, the document-
+oriented approach makes it possible to represent complex hierarchical relationships
+with a single record. This fits naturally into the way developers in modern object-
+oriented languages think about their data.
+
+Easy Scaling
+Data set sizes for applications are growing at an incredible pace. Increases in available
+bandwidth and cheap storage have created an environment where even small-scale ap‐
+plications need to store more data than many databases were meant to handle. A terabyte
+of data, once an unheard-of amount of information, is now commonplace.
+As the amount of data that developers need to store grows, developers face a difficult
+decision: how should they scale their databases? Scaling a database comes down to the
+choice between scaling up (getting a bigger machine) or scaling out (partitioning data
+across more machines). Scaling up is often the path of least resistance, but it has draw‐
+backs: large machines are often very expensive, and eventually a physical limit is reached
+where a more powerful machine cannot be purchased at any cost. The alternative is to
+scale out: to add storage space or increase performance, buy another commodity server
+and add it to your cluster. This is both cheaper and more scalable; however, it is more
+difficult to administer a thousand machines than it is to care for one.
+MongoDB was designed to scale out. Its document-oriented data model makes it easier
+for it to split up data across multiple servers. MongoDB automatically takes care of
+balancing data and load across a cluster, redistributing documents automatically and
+routing user requests to the correct machines. This allows developers to focus on pro‐
+gramming the application, not scaling it. When a cluster need more capacity, new ma‐
+chines can be added and MongoDB will figure out how the existing data should be
+spread to them
+
+Tons of Features...
+MongoDB is intended to be a general-purpose database, so aside from creating, reading,
+updating, and deleting data, it provides an ever-growing list of unique features:
+Indexing
+MongoDB supports generic secondary indexes, allowing a variety of fast queries,
+and provides unique, compound, geospatial, and full-text indexing capabilities as
+well.
+Aggregation
+MongoDB supports an “aggregation pipeline” that allows you to build complex
+aggregations from simple pieces and allow the database to optimize it.
+Special collection types
+MongoDB supports time-to-live collections for data that should expire at a certain
+time, such as sessions. It also supports fixed-size collections, which are useful for
+holding recent data, such as logs.
+File storage
+MongoDB supports an easy-to-use protocol for storing large files and file metadata.
+Some features common to relational databases are not present in MongoDB, notably
+joins and complex multirow transactions. Omitting these was an architectural decision
+to allow for greater scalability, as both of those features are difficult to provide efficiently
+in a distributed system.
+
+
+...Without Sacrificing Speed
+Incredible performance is a major goal for MongoDB and has shaped much of its design.
+MongoDB adds dynamic padding to documents and preallocates data files to trade extra
+space usage for consistent performance. It uses as much of RAM as it can as its cache
+and attempts to automatically choose the correct indexes for queries. In short, almost
+every aspect of MongoDB was designed to maintain high performance.
+Although MongoDB is powerful and attempts to keep many features from relational
+systems, it is not intended to do everything that a relational database does. Whenever
+possible, the database server offloads processing and logic to the client side (handled
+either by the drivers or by a user’s application code). Maintaining this streamlined design
+is one of the reasons MongoDB can achieve such high performance.
